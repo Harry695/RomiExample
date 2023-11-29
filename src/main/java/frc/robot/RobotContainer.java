@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ArcadeDrive;
+import frc.robot.commands.CirclePath;
 import frc.robot.commands.StudentPath;
 import frc.robot.commands.ExamplePath;
 import frc.robot.subsystems.Drivetrain;
@@ -73,6 +74,7 @@ public class RobotContainer {
     // Setup SmartDashboard options
     m_chooser.setDefaultOption("Student Path", new StudentPath(m_drivetrain));
     m_chooser.addOption("Example Path", new ExamplePath(m_drivetrain));
+    m_chooser.addOption("Circle Path", new CirclePath(m_drivetrain));
     SmartDashboard.putData(m_chooser);
   }
 
